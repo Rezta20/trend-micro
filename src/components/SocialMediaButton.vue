@@ -3,10 +3,10 @@
     <button class="wrapper">
       <div class="icon">
         <div v-if="logo === 'google'">
-          <i class="fab fa-google icon"></i>
+          <font-awesome-icon icon="fa-brands fa-google" />
         </div>
         <div v-if="logo === 'facebook'">
-          <i class="fab fa-facebook-f"></i>
+          <font-awesome-icon icon="fa-brands fa-facebook-f" />
         </div>
       </div>
       <p>{{ text }}</p>
@@ -45,12 +45,21 @@ export default {
 
   .icon {
     color: $icon-color;
-    padding-right: 6px;
+    padding-right: 8px;
     font-size: 22px;
   }
 
   p {
     font-size: 13px;
+  }
+
+  &:hover {
+    background-color: $icon-color;
+    color: $white;
+    box-shadow: 0px 6px 15px rgba(60, 113, 255, 0.4);
+    .icon {
+      color: $white;
+    }
   }
 }
 </style>
